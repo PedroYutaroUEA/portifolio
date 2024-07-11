@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(51 65 85);
+  overflow-x: hidden;
+}
+
+main {
+  background: rgb(226 232 240);
+  display: flex;
+  border-radius: .25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 4rem 16rem;
+}
+
+hr.divider {
+  opacity: 0.25;
+  border-top: 2px dashed rgb(51 65 85);
+  margin: 2rem 0rem;
+  width: 100%;
+}
+
+section.user-section {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  gap: 4rem;
+  align-items: center;
+}
+
+section.user-section div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section.user-section div h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+section.user-section img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+}
+
+div #myDiv {
+  background-color: #000;
+}
