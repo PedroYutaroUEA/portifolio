@@ -15,7 +15,6 @@ const button = document.getElementById("presentation-button")
 function restyleBg() {
   const body = document.getElementById("body-about");
   body.style.height = "100%";
-  body.style.width = "100%";
 }
 
 function showPrompt() {

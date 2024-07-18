@@ -15,7 +15,7 @@ body {
 
 body#body-about {
   height: 100vh;
-  width: 100vh;
+  width: 100%;
   background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
