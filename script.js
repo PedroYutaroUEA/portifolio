@@ -12,24 +12,39 @@ async function getProfilePic() {
 
 const button = document.getElementById("presentation-button")
 
+function restyleBg() {
+  const body = document.getElementById("body-about");
+  body.style.height = "100%";
+  body.style.width = "100%";
+}
+
 function showPrompt() {
   let name = window.prompt("set your name");
   let age = window.prompt("set your age");
-
-  const newH1 = document.createElement("h1");
-  parseInt(age) >= 18
-  ? newH1.textContent = `Hello my budy ${name}!`
-  : newH1.textContent = `salve my kiddo ${name}!`
+  if (name !== "" && age > 0) {
+    const newH1 = document.createElement("h1");
+    parseInt(age) >= 18
+    ? newH1.textContent = `Hello my budy ${name}!`
+    : newH1.textContent = `salve my kiddo ${name}!`
   
-  button.parentNode.insertBefore(newH1, button);
+    button.parentNode.insertBefore(newH1, button);
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function setUser() {
-  showPrompt();
-  const imagePath = "../images/image_for_portifolio.jpg"
-  const newImage = document.createElement("img");
-  newImage.src = imagePath;
-  button.parentNode.insertBefore(newImage, button);
+  const validation = showPrompt();
+  if (validation) {
+    const imagePath = "../images/image_for_portifolio.jpg"
+    const newImage = document.createElement("img");
+    newImage.src = imagePath;
+    button.parentNode.insertBefore(newImage, button);
+    restyleBg();
+  } else {
+    alert('please respond all information')
+  }
 }
 
 getProfilePic();
